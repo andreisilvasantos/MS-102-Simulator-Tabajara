@@ -1,0 +1,114 @@
+🎓 Simulado MS-102: Microsoft 365 Administrator
+
+Um simulador web interativo e bilíngue (Inglês e Português do Brasil) desenvolvido para a preparação do exame de certificação Microsoft 365 Administrator (MS-102).
+
+O projeto conta com 500 questões abrangendo todos os domínios oficiais da prova, cenários corporativos completos (Case Studies), suporte a alternância dinâmica de idioma e relatórios de desempenho por área de conhecimento.
+
+🚀 Funcionalidades Principais
+
+* 🌐 Sistema Bilíngue em Tempo Real (EN / PT-BR):
+  * Alterne entre o idioma original em inglês e a tradução técnica para o português a qualquer momento.
+  * Escolha o idioma individualmente por questão ou defina um padrão global para todo o simulado.
+  * Preservação do estado da questão, tempo decorrido, respostas selecionadas e marcações de revisão ao trocar de idioma.
+* 🎯 Modos de Simulado:
+  * Modo Prova Oficial (60 Questões): Simula a experiência real do exame da Microsoft, com 60 questões selecionadas proporcionalmente pelos domínios, cronômetro de 120 minutos e nota de corte equivalente a 700/1000 pontos.
+  * Treino Rápido (10 Questões): Ideal para revisões diárias e acompanhamento ágil de conceitos.
+  * Banco Completo (500 Questões): Acesso a todo o acervo de questões para estudos aprofundados.
+* 🏛️ Cenários Corporativos Completos (Case Studies):
+  * Questões baseadas em casos práticos detalhados (Contoso Ltd., Fabrikam Inc., Tailspin Toys, Northwind Traders), apresentando a infraestrutura híbrida, requisitos de negócios e restrições de conformidade na íntegra.
+* 📊 Relatório de Desempenho por Domínio:
+  * Ao finalizar o simulado, receba um diagnóstico detalhado com a porcentagem de acertos em cada um dos 4 domínios da certificação.
+* 🔒 Fidelidade aos Termos Técnicos Microsoft:
+  * Manutenção rigorosa dos nomes oficiais de produtos, recursos, funções administrativas e políticas da Microsoft em ambos os idiomas (ex.: Conditional Access, Administrative Units, Smart Lockout, Audit Reader, Defender XDR, Purview DLP).
+
+📚 Domínios do Exame MS-102 Cobertos
+
+1. Deploy and Manage a Microsoft 365 Tenant (125 questões):
+  * Implantação e gerenciamento de tenants, domínios (Internal Relay vs. Authoritative), registros DNS (SPF, DKIM, DMARC), funções RBAC e métricas de adoção.
+2. Implement and Manage Identity and Access (125 questões):
+  * Sincronização híbrida (Entra Connect Sync vs. Cloud Sync), autenticação pass-through (PTA), hash de senha (PHS), Smart Lockout, PIM e políticas de Acesso Condicional com simulação What If.
+3. Manage Security and Threats Using Microsoft 365 Defender (125 questões):
+  * Políticas de Safe Links, Safe Attachments, anti-phishing, proteção de identidade no Entra ID Protection e Treinamento de Simulação de Ataque.
+4. Manage Microsoft Purview Compliance (125 questões):
+  * Rótulos de sensibilidade, políticas de retenção adaptativas e estáticas, robusto controle de DLP, eDiscovery e grupos de funções de auditoria.
+
+📂 Estrutura do Repositório
+
+.
+├── index.html                      # Aplicação web do simulador interativo
+├── banco-de-questoes-ms102-v4.json # Banco de dados com as 500 questões bilíngues e gabaritos
+├── README.md                       # Documentação do projeto
+└── assets/                         # Arquivos adicionais do projeto
+
+
+🛠️ Estrutura do Banco JSON (banco-de-questoes-ms102-v4.json)
+
+Cada questão é armazenada com suporte nativo a dois idiomas e controle de resposta:
+
+{
+  "id": "MS102-0001",
+  "category": "Deploy and manage a Microsoft 365 tenant",
+  "scenario": {
+    "en": "Case Study Scenario: Contoso Ltd. is migrating 5,000 users to Microsoft 365...",
+    "pt": "Cenário de Estudo de Caso: A Contoso Ltd. está migrando 5.000 usuários para o Microsoft 365..."
+  },
+  "language": {
+    "en": {
+      "question": "Which Microsoft Entra role should you assign?",
+      "options": [
+        "Helpdesk Administrator",
+        "User Administrator",
+        "Global Administrator",
+        "Security Reader"
+      ],
+      "explanation": "Helpdesk Administrator can reset passwords for non-privileged users."
+    },
+    "pt": {
+      "question": "Qual função do Microsoft Entra você deve atribuir?",
+      "options": [
+        "Administrador do Helpdesk",
+        "Administrador de Usuários",
+        "Administrador Global",
+        "Leitor de Segurança"
+      ],
+      "explanation": "O Administrador do Helpdesk pode redefinir senhas de usuários não privilegiados."
+    }
+  },
+  "correctAnswer": 0
+}
+
+
+💻 Como Executar
+
+Opção 1: Execução Local Direta
+
+1. Baixe os arquivos do repositório em sua máquina.
+2. Abra o arquivo index.html diretamente em qualquer navegador moderno.
+
+Opção 2: Servidor Web Local (Node.js / Python)
+
+Para evitar restrições de CORS ao carregar arquivos JSON locais via fetch:
+
+* Com Python: python3 -m http.server 8000 Acesse http://localhost:8000 no seu navegador.
+* Com Node.js (npx serve): npx serve .
+
+Opção 3: GitHub Pages
+
+1. Vá até as configurações do seu repositório no GitHub (Settings > Pages).
+2. Selecione a branch main como fonte de publicação.
+3. Salve as alterações. O simulador ficará acessível publicamente na URL do seu GitHub Pages.
+
+📖 Como Estudar
+
+1. Selecione o Modo Prova Oficial para testar a sua velocidade e gestão de tempo sob as restrições da prova real (60 questões / 120 minutos).
+2. Utilize o botão de alternância de idioma nas questões mais complexas para validar o entendimento dos termos técnicos em inglês antes da prova oficial.
+3. Marque questões duvidosas usando a opção Marcar para Revisão (Mark for Review) para conferi-las na grade antes de finalizar a tentativa.
+4. Analise as explicações técnicas no gabarito ao final para identificar os pontos fracos por domínio.
+
+🤝 Contribuições
+
+Contribuições são super bem-vindas! Sinta-se à vontade para abrir uma Issue ou enviar um Pull Request para melhorias na interface ou adição de novos casos práticos.
+
+📄 Licença
+
+Este projeto está licenciado sob a licença MIT.
