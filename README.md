@@ -34,48 +34,8 @@ O projeto conta com 500 questões abrangendo todos os domínios oficiais da prov
 
 📂 Estrutura do Repositório
 
-.
 ├── index.html                      # Aplicação web do simulador interativo
-├── banco-de-questoes-ms102-v4.json # Banco de dados com as 500 questões bilíngues e gabaritos
 ├── README.md                       # Documentação do projeto
-└── assets/                         # Arquivos adicionais do projeto
-
-
-🛠️ Estrutura do Banco JSON (banco-de-questoes-ms102-v4.json)
-
-Cada questão é armazenada com suporte nativo a dois idiomas e controle de resposta:
-
-{
-  "id": "MS102-0001",
-  "category": "Deploy and manage a Microsoft 365 tenant",
-  "scenario": {
-    "en": "Case Study Scenario: Contoso Ltd. is migrating 5,000 users to Microsoft 365...",
-    "pt": "Cenário de Estudo de Caso: A Contoso Ltd. está migrando 5.000 usuários para o Microsoft 365..."
-  },
-  "language": {
-    "en": {
-      "question": "Which Microsoft Entra role should you assign?",
-      "options": [
-        "Helpdesk Administrator",
-        "User Administrator",
-        "Global Administrator",
-        "Security Reader"
-      ],
-      "explanation": "Helpdesk Administrator can reset passwords for non-privileged users."
-    },
-    "pt": {
-      "question": "Qual função do Microsoft Entra você deve atribuir?",
-      "options": [
-        "Administrador do Helpdesk",
-        "Administrador de Usuários",
-        "Administrador Global",
-        "Leitor de Segurança"
-      ],
-      "explanation": "O Administrador do Helpdesk pode redefinir senhas de usuários não privilegiados."
-    }
-  },
-  "correctAnswer": 0
-}
 
 
 💻 Como Executar
@@ -85,18 +45,6 @@ Opção 1: Execução Local Direta
 1. Baixe os arquivos do repositório em sua máquina.
 2. Abra o arquivo index.html diretamente em qualquer navegador moderno.
 
-Opção 2: Servidor Web Local (Node.js / Python)
-
-Para evitar restrições de CORS ao carregar arquivos JSON locais via fetch:
-
-* Com Python: python3 -m http.server 8000 Acesse http://localhost:8000 no seu navegador.
-* Com Node.js (npx serve): npx serve .
-
-Opção 3: GitHub Pages
-
-1. Vá até as configurações do seu repositório no GitHub (Settings > Pages).
-2. Selecione a branch main como fonte de publicação.
-3. Salve as alterações. O simulador ficará acessível publicamente na URL do seu GitHub Pages.
 
 📖 Como Estudar
 
