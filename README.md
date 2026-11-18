@@ -35,6 +35,7 @@ O projeto conta com 500 questões abrangendo todos os domínios oficiais da prov
 📂 Estrutura do Repositório
 
 ├── index.html                      # Aplicação web do simulador interativo
+
 ├── README.md                       # Documentação do projeto
 
 
